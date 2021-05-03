@@ -1,0 +1,13 @@
+include ../positioner/positioner
+include ../logo/logo
+include ../navigation/navigation
+
+mixin header(options)
+    header.header
+        +positioner.header__positioner
+            +logo.header__logo
+            +navigation(options)
+            .header__items
+                button(class="header__item")
+                button(class="header__item")
+                button(class="header__item")

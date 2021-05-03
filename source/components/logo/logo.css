@@ -1,0 +1,12 @@
+.logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo__name {
+    text-decoration: none;
+    color: #555248;
+    text-transform: uppercase;
+    font-family: "Playfair Display";
+}
