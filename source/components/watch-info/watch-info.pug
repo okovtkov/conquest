@@ -1,0 +1,25 @@
+include ../positioner/positioner
+include ../gallery/gallery
+include ../svg-icon/svg-icon
+
+mixin watch-info
+    +positioner
+        article.watch-info
+            +gallery
+            section.watch-info__about
+                header.watch-info__header
+                    h1.watch-info__title kulte 26 мм
+                    input.watch-info__checkbox(type="checkbox" id="favourite")
+                    label.watch-info__favourite(for="favourite")
+                        +svg-icon('favourite')
+                span.watch-info__price 12 700 ₽
+                section
+                    input.watch-info__radio(type="radio" id="characteristics" name="desc")
+                    input.watch-info__radio(type="radio" id="description" name="desc")
+                    label.watch-info__description(for="description") Описание
+                    label.watch-info__characteristics(for="characteristics") Технические характеристики
+                article.watch-info__content
+                    p.watch-info__text Наручные часы KULTE, разработанные датским дизайнером Хэннингом Коппелем, были выпущены в 1982 году. Они были встречены аплодисментами, а дизайн считался революционным.
+                    p.watch-info__text Общая эстетика минималистична, а острые, плавные линии корпуса стали легендарными. Механизм Swiss Made обеспечивает высокий уровень технических характеристик.
+                    p.watch-info__text Наручные часы KULTE — это образец датского дизайнерского наследия, история баланса и точности как внутри, так и снаружи.
+                button.watch-info__basket-button в корзину

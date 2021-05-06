@@ -1,0 +1,11 @@
+mixin bread-crumbs(page)
+    .bread-crumbs
+        +positioner.bread-crumbs__positioner
+            a.bread-crumbs__link(href="#") Главная
+            span.bread-crumbs__arrow >
+            a.bread-crumbs__link(href="#") Каталог
+            span.bread-crumbs__arrow >
+            a.bread-crumbs__link(href="#") Мужские часы
+            if (page)
+                span.bread-crumbs__arrow >
+                a.bread-crumbs__link(href="#") #{page}

@@ -3,6 +3,11 @@
 @import "../components/header/header.css";
 @import "../components/logo/logo.css";
 @import "../components/navigation/navigation.css";
+@import "../components/bread-crumbs/bread-crumbs.css";
+@import "../components/catalog-header/catalog-header.css";
+@import "../components/gallery/gallery.css";
+@import "../components/watch-info/watch-info.css";
+
 
 
 *, *::before, *::after {

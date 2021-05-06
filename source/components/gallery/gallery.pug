@@ -1,0 +1,20 @@
+include ../svg-icon/svg-icon
+
+mixin gallery
+    section.gallery
+        .gallery__main
+            button.gallery__button.gallery__button_prev
+                +svg-icon('arrow')
+            .gallery__large-img
+                img.gallery__main-img(src="/img/watch_card_1.png", alt="часы, циферблат" style="width: 75%")
+            button.gallery__button.gallery__button_next
+                +svg-icon('arrow')
+        ul.gallery__preview
+            li.gallery__item
+                img.gallery__image(src="/img/watch_card_1.png" alt="часы, циферблат" data-name="img_1")
+            li.gallery__item
+                img.gallery__image(src="/img/watches_3.png", alt="часы, вид спереди" data-name="img_2")
+            li.gallery__item
+                img.gallery__image(src="/img/watches_4.png", alt="часы, крышка" data-name="img_3")
+            li.gallery__item
+                img.gallery__image(src="/img/watches_5.png", alt="часы, вид сбоку" data-name="img_4")
