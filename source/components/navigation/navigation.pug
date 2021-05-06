@@ -1,9 +1,8 @@
 //- если  есть compactNavigation, TO навигация остается компактная даже на компуктерах
 mixin navigation(options = {})
     - let mod = (options.compactNavigation) ? "navigation_compact" : "";
-    nav.navigation(class=mod)
-        input.navigation__checkbox(id="menu" type="checkbox")
-        label.navigation__menu(for="menu")
+    nav.navigation(class=mod)&attributes(attributes)
+        button.navigation__menu
         .navigation__links
             a.navigation__link(href="#") Каталог
             a.navigation__link(href="#") Акции

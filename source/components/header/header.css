@@ -1,6 +1,7 @@
 .header {
     margin-top: 28px;
     padding-bottom: 28px;
+    z-index: 2;
 }
 
 .header__positioner {
@@ -9,15 +10,9 @@
     align-items: center;
 }
 
-@media screen and (min-width: 320px) {
-    .header__logo {
-        margin-left: 40px;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .header__logo {
-        margin-left: 0px;
+@media screen and (max-width: 767px) {
+    .header__navigation {
+        order: -1;
     }
 }
 
@@ -38,14 +33,14 @@
 }
 
 .header__item:first-child {
-    background-image: url('search.svg');
+    background-image: url('/icon/search.svg');
 }
 
 .header__item:nth-child(2) {
-    background-image: url('favourite.svg');
+    background-image: url('/icon/favourite.svg');
 }
 
 .header__item:last-child {
     margin-right: 0;
-    background-image: url('basket.svg');
+    background-image: url('/icon/basket.svg');
 }

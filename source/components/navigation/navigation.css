@@ -1,8 +1,5 @@
 .navigation__menu {
     display: inline-block;
-    position: absolute;
-    top: 4px;
-    left: 30px;
     height: 20px;
     width: 20px;
     background-image: url("burger.svg"); 
@@ -48,10 +45,11 @@
         width: 100vw;
         height: calc(100vh - 82px);
         background-color: rgba(128, 128, 128, 0.5);
+        z-index: 1;
         content: '';
     }
 
-    .navigation__checkbox:checked ~ .navigation__menu::before {
+    .navigation_active .navigation__menu::before {
         display: block;
     }
 
@@ -70,7 +68,7 @@
         z-index: 1;
     }
 
-    .navigation__checkbox:checked ~ .navigation__links {
+    .navigation_active .navigation__links {
         left: -1px;
     }
 
