@@ -3,6 +3,9 @@ include ../components/bread-crumbs/bread-crumbs
 include ../components/catalog-header/catalog-header
 include ../components/gallery/gallery
 include ../components/watch-info/watch-info
+include ../components/watch-card/watch-card
+include ../components/slider/slider
+
 
 html
     head
@@ -14,3 +17,5 @@ html
         +header({ compactNavigation: true })
         +bread-crumbs("Georg Jensen")
         +watch-info
+        - let watches = require('../data/watches.js');
+        +slider('Вы смотрели', watches)

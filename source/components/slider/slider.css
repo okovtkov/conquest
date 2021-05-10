@@ -1,0 +1,99 @@
+.title {
+    font-family: 'Playfair Display';
+    font-size: 32px;
+}
+
+.slider {
+    position: relative;
+    padding: 0 8.8034%;
+}
+
+.slider__button {
+    position: absolute;
+    width: 12px;
+    height: 23px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.slider__button_prev {
+    transform: rotate(90deg);
+    top: 175px;
+    left: 51px;
+}
+
+.slider__button_next {
+    transform: rotate(-90deg);
+    top: 187px;
+    right: 51px;
+}
+
+@media screen and (min-width: 320px) {
+    .slider__button_prev {
+        transform: scale(2) rotate(90deg);
+        left: 10px;
+    }
+
+    .slider__button_next {
+        transform: scale(2) rotate(-90deg);
+        right: 10px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .slider__button_prev {
+        left: 23px;
+    }
+
+    .slider__button_next {
+        right: 23px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .slider__button_prev {
+        left: 51px;
+    }
+
+    .slider__button_next {
+        right: 51px;
+    }
+}
+
+.slider__hidden-block {
+    overflow: hidden;
+}
+
+.slider__container {
+    position: relative;
+    left: 0;
+    display: flex;
+    white-space: nowrap;
+    transition: left 0.3s ease;
+}
+
+.slider__item {
+    width: 32.35%;
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+    flex-shrink: 0;
+}
+
+@media screen and (min-width: 320px) {
+    .slider__item {
+        width: 99%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .slider__item {
+        width: 49%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .slider__item {
+        width: 32.35%;
+    }
+}

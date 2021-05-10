@@ -1,0 +1,61 @@
+.watch-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 360px;
+    height: 374px;
+    margin-top: 1.2878%;
+    background-color: #FDFDFB;
+}
+
+.watch-card__information {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.watch-card__name {
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 9px;
+}
+
+.watch-card__price {
+    font-size: 14px;
+    color: #636261;
+}
+
+.watch-card__icons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.watch-card__checkbox {
+    display: none;
+}
+
+.watch-card__favourite,
+.watch-card__basket {
+    display: inline-block;
+    width: 20px;
+    height: 17px;
+    background-position: center;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+.watch-card__favourite {
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+.watch-card__basket {
+    margin-top: 5px;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.watch-card__image {
+    text-align: center;
+}
