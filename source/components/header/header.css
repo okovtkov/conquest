@@ -32,15 +32,15 @@
     outline: none;
 }
 
-.header__item:first-child {
-    background-image: url('/icon/search.svg');
+.header__item_search {
+    background-image: url('search.svg');
 }
 
-.header__item:nth-child(2) {
-    background-image: url('/icon/favourite.svg');
+.header__item_favourite {
+    background-image: url('favourite.svg');
 }
 
-.header__item:last-child {
+.header__item_basket {
     margin-right: 0;
-    background-image: url('/icon/basket.svg');
+    background-image: url('basket.svg');
 }

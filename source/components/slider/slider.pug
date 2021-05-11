@@ -1,0 +1,12 @@
+mixin slider(title, watches)
+    +positioner
+        h2.title #{title}
+    .slider
+        button.slider__button.slider__button_prev
+            +svg-icon('arrow')
+        button.slider__button.slider__button_next
+            +svg-icon('arrow')
+        ul.slider__container
+            each watch in watches
+                li.slider__item
+                    +watch-card(watch)

@@ -1,0 +1,13 @@
+include ../positioner/positioner
+
+mixin watch-card(watch)
+    section.watch-card&attributes(attributes)
+        header.watch-card__information
+            a.watch-card__name(href="#") #{watch.name}
+            span.watch-card__price #{watch.price} ₽
+        .watch-card__icons
+            button.watch-card__favourite
+                +svg-icon('favourite')
+            button.watch-card__basket
+                +svg-icon('basket')
+        img.watch-card__image(src=watch.image, alt=`часы ${watch.name}`)
