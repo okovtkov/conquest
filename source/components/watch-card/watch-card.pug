@@ -2,15 +2,12 @@ include ../positioner/positioner
 
 mixin watch-card(watch)
     section.watch-card&attributes(attributes)
-        .watch-card__information
-            h3.watch-card__name #{watch.name}
+        header.watch-card__information
+            a.watch-card__name(href="#") #{watch.name}
             span.watch-card__price #{watch.price} ₽
         .watch-card__icons
-            label.watch-card__favourite
+            button.watch-card__favourite
                 +svg-icon('favourite')
-                input.watch-card__checkbox(type='checkbox' id='watch-card-favourite')
-            label(for='watch-card-basket').watch-card__basket
+            button.watch-card__basket
                 +svg-icon('basket')
-                input.watch-card__checkbox(type='checkbox' id='watch-card-basket')
-        img.watch-card__image(src=watch.image, alt="часы")
-
+        img.watch-card__image(src=watch.image, alt=`часы ${watch.name}`)

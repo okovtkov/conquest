@@ -6,7 +6,7 @@ mixin slider(title, watches)
             +svg-icon('arrow')
         button.slider__button.slider__button_next
             +svg-icon('arrow')
-        .slider__hidden-block
-            .slider__container
-                each watch in watches
-                    +watch-card(watch).slider__item
+        ul.slider__container
+            each watch in watches
+                li.slider__item
+                    +watch-card(watch)

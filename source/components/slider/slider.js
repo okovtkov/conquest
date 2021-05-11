@@ -6,7 +6,7 @@ let slider = document.querySelector('.slider');
 let items = Array.from(document.querySelectorAll('.slider__item'));
 let current = 0;
 let styles = getComputedStyle(document.querySelector('.slider__item'));
-let width = parseFloat(styles.width) + parseFloat(styles.marginLeft) + parseFloat(styles.marginRight);
+let width = parseFloat(styles.width) + parseFloat(styles.marginRight);
 
 slider.addEventListener('click', (event) => {
     if (event.target.closest('.slider__button_prev') === prev) scroll(-1);
@@ -18,6 +18,6 @@ function scroll(n) {
     current += n;
     if (current < 0) current = items.length - visibleCards;
     if (current > items.length - visibleCards) current = 0;
-    let container = document.querySelector('.slider__container');
-    container.style.left = -(current * width) + 'px';
+    let item = document.querySelector('.slider__item');
+    item.style.marginLeft = -(current * width) + 'px';
 }

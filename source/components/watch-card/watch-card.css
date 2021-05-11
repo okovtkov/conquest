@@ -15,7 +15,11 @@
 }
 
 .watch-card__name {
+    display: block;
     text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
     margin-top: 0;
     margin-bottom: 9px;
 }
@@ -27,12 +31,8 @@
 
 .watch-card__icons {
     position: absolute;
-    top: 20px;
+    top: 15px;
     right: 20px;
-}
-
-.watch-card__checkbox {
-    display: none;
 }
 
 .watch-card__favourite,
@@ -43,6 +43,8 @@
     background-position: center;
     background-repeat: no-repeat;
     vertical-align: middle;
+    background-color: transparent;
+    border: none;
 }
 
 .watch-card__favourite {
