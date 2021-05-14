@@ -9,6 +9,7 @@
 @import "../components/watch-info/watch-info.css";
 @import "../components/watch-card/watch-card.css";
 @import "../components/slider/slider.css";
+@import "../components/footer/footer.css";
 
 
 *, *::before, *::after {

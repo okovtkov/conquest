@@ -5,7 +5,7 @@ include ../components/gallery/gallery
 include ../components/watch-info/watch-info
 include ../components/watch-card/watch-card
 include ../components/slider/slider
-
+include ../components/footer/footer
 
 html
     head
@@ -20,3 +20,4 @@ html
             +watch-info
             - let watches = require('../data/watches.js');
             +slider('Вы смотрели', watches)
+            +footer
