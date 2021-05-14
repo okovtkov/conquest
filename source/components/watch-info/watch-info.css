@@ -138,6 +138,13 @@
     border-bottom: 2px solid #C4C0B6;
 }
 
+@media screen and (max-width: 768px) {
+    .watch-info__link_active {
+        border-bottom: none;
+        color: #A69876;
+    }
+}
+
 .watch-info__content {
     display: none;
     margin-top: 7.1428%;
