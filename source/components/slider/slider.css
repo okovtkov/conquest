@@ -32,11 +32,11 @@
 
 @media screen and (min-width: 600px) {
     .slider__button_prev {
-        left: 20px;
+        left: 40px;
     }
 
     .slider__button_next {
-        right: 25px;
+        right: 45px;
     }
 }
 
