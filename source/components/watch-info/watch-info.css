@@ -181,15 +181,3 @@
     font-weight: 300;
     font-size: 14px;
 }
-
-.watch-info__basket-button {
-    text-transform: uppercase;
-    padding: 24px 56px;
-    border-radius: 0;
-    border: 0;
-    font-weight: bold;
-    font-size: 12px;
-    background-color: #31302C;
-    color: white;
-    cursor: pointer;
-}
