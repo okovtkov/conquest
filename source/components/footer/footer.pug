@@ -1,44 +1,46 @@
 include ../logo/logo
+include ../positioner/positioner
 
 mixin footer
     footer.footer
-        section.footer__column
-            +logo.footer__logo
-            ul.footer__options
-                li.footer__list
-                    a.footer__link.footer__link_tel(href="tel:84994504797") 8 (499) 450-47-97
-                li.footer__list
-                    a.footer__link.footer__link_mail(href="mailto:info@conquest.watch.ru") info@conquest.watch.ru
-        section.footer__column
-            div.footer__heading о компании
-            ul.footer__options
-                li.footer__list
-                    a.footer__link(href="#") Наши магазины
-                li.footer__list
-                    a.footer__link(href="#") Вакансии
-                li.footer__list
-                    a.footer__link(href="#") Сертификаты
-                li.footer__list
-                    a.footer__link(href="#") Отзывы
-        section.footer__column
-            div.footer__heading покупателям
-            ul.footer__options
-                li.footer__list
-                    a.footer__link(href="#") Каталог товаров
-                li.footer__list
-                    a.footer__link(href="#") Как заказать?
-                li.footer__list
-                    a.footer__link(href="#") FAQ
-                li.footer__list
-                    a.footer__link(href="#") Корпоративным клиентам
-        section.footer__column
-            div.footer__heading оплата и доставка
-            ul.footer__options
-                li.footer__list
-                    a.footer__link(href="#") Способы оплаты
-                li.footer__list
-                    a.footer__link(href="#") Время доставки
-                li.footer__list
-                    a.footer__link(href="#") Гарантии и ремонт
-                li.footer__list
-                    a.footer__link(href="#") Возврат и компенсация
+        +positioner.footer__content
+            section.footer__column
+                +logo.footer__logo
+                ul.footer__options
+                    li.footer__list
+                        a.footer__link.footer__link_tel(href="tel:84994504797") 8 (499) 450-47-97
+                    li.footer__list
+                        a.footer__link.footer__link_mail(href="mailto:info@conquest.watch.ru") info@conquest.watch.ru
+            section.footer__column
+                div.footer__heading о компании
+                ul.footer__options
+                    li.footer__list
+                        a.footer__link(href="#") Наши магазины
+                    li.footer__list
+                        a.footer__link(href="#") Вакансии
+                    li.footer__list
+                        a.footer__link(href="#") Сертификаты
+                    li.footer__list
+                        a.footer__link(href="#") Отзывы
+            section.footer__column
+                div.footer__heading покупателям
+                ul.footer__options
+                    li.footer__list
+                        a.footer__link(href="#") Каталог товаров
+                    li.footer__list
+                        a.footer__link(href="#") Как заказать?
+                    li.footer__list
+                        a.footer__link(href="#") FAQ
+                    li.footer__list
+                        a.footer__link(href="#") Корпоративным клиентам
+            section.footer__column
+                div.footer__heading оплата и доставка
+                ul.footer__options
+                    li.footer__list
+                        a.footer__link(href="#") Способы оплаты
+                    li.footer__list
+                        a.footer__link(href="#") Время доставки
+                    li.footer__list
+                        a.footer__link(href="#") Гарантии и ремонт
+                    li.footer__list
+                        a.footer__link(href="#") Возврат и компенсация

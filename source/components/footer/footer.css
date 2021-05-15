@@ -1,14 +1,17 @@
 .footer {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 3.5% 13.3235725% 3% 13.3235725%;
+    padding: 3.5% 0 3% 0;
     background-color: #444240;
 }
 
+.footer__content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 @media screen and (min-width: 600px) {
-    .footer {
+    .footer__content {
         flex-direction: row;
     }
 }

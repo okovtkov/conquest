@@ -10,34 +10,48 @@
 
 .slider__button {
     position: absolute;
-    width: 12px;
-    height: 23px;
+    width: 20px;
+    height: 20px;
     border: none;
     background-color: transparent;
     cursor: pointer;
 }
 
 .slider__button_prev {
-    transform: scale(2) rotate(90deg);
+    transform: rotate(90deg);
     top: 164px;
-    left: 14px;
+    left: 21px;
 }
 
 .slider__button_next {
-    transform: scale(2) rotate(-90deg);
-    top: 187px;
-    right: 14px;
-
+    transform: rotate(-90deg);
+    top: 174px;
+    right: 21px;
 }
 
 @media screen and (min-width: 600px) {
     .slider__button_prev {
-        left: 40px;
+        left: 35px;
     }
 
     .slider__button_next {
-        right: 45px;
+        right: 35px;
     }
+}
+
+@media screen and (min-width: 1024px) {
+    .slider__button_prev {
+        left: 55px;
+    }
+
+    .slider__button_next {
+        right: 55px;
+    }
+}
+
+.slider__button svg {
+    width: 20px;
+    height: 40px;
 }
 
 .slider__container {
