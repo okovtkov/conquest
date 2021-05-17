@@ -138,6 +138,13 @@
     border-bottom: 2px solid #C4C0B6;
 }
 
+@media screen and (max-width: 768px) {
+    .watch-info__link_active {
+        border-bottom: none;
+        color: #A69876;
+    }
+}
+
 .watch-info__content {
     display: none;
     margin-top: 7.1428%;
@@ -173,16 +180,4 @@
 .watch-info__text {
     font-weight: 300;
     font-size: 14px;
-}
-
-.watch-info__basket-button {
-    text-transform: uppercase;
-    padding: 24px 56px;
-    border-radius: 0;
-    border: 0;
-    font-weight: bold;
-    font-size: 12px;
-    background-color: #31302C;
-    color: white;
-    cursor: pointer;
 }

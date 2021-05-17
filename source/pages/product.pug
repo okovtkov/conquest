@@ -1,0 +1,10 @@
+include ../components/page/page
+include ../components/bread-crumbs/bread-crumbs
+include ../components/watch-info/watch-info
+include ../components/slider/slider
+
++page("Georg Jensen")
+    +bread-crumbs("Georg Jensen")
+    +watch-info
+    - let watches = require('../data/watches.js');
+    +slider('Вы смотрели', watches)

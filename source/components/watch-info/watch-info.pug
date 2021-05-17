@@ -1,6 +1,7 @@
 include ../positioner/positioner
 include ../gallery/gallery
 include ../svg-icon/svg-icon
+include ../button/button
 
 mixin watch-info
     +positioner('article').watch-info
@@ -20,4 +21,4 @@ mixin watch-info
                 p.watch-info__text Наручные часы KULTE — это образец датского дизайнерского наследия, история баланса и точности как внутри, так и снаружи.
             section.watch-info__content(id="characteristics")
                 p.watch-info__text Характеристики
-            button.watch-info__basket-button в корзину
+            +button('в корзину')

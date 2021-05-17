@@ -7,8 +7,11 @@
 @import "../components/catalog-header/catalog-header.css";
 @import "../components/gallery/gallery.css";
 @import "../components/watch-info/watch-info.css";
+@import "../components/button/button.css";
 @import "../components/watch-card/watch-card.css";
 @import "../components/slider/slider.css";
+@import "../components/footer/footer.css";
+@import "../components/main-banner/main-banner.css";
 
 
 *, *::before, *::after {
