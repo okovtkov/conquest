@@ -1,0 +1,20 @@
+include ../positioner/positioner
+include ../button/button
+include ../svg-icon/svg-icon
+
+mixin banner
+    section.banner
+        +positioner.banner__container
+            .banner__container-img
+                img(src="/img/photo_banner.jpg", alt="картинка с циферблатом").banner__image
+                .banner__slider
+                    button.banner__button.banner__button_prev
+                        +svg-icon('arrow')
+                    span.banner__number 01
+                    button.banner__button.banner__button_next
+                        +svg-icon('arrow')
+            .banner__container-text
+                h2.banner__title Подлинное качество
+                p.banner__text Все часы производятся в Швейцарии и имеют сертификаты качества. 
+                            | Настоящие швейцарские часы — это предмет гордости и престижа.
+                +button('Смотреть каталог').banner__button-link
