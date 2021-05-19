@@ -1,0 +1,11 @@
+include ../popular-watch/popular-watch
+
+mixin popular
+    +positioner('article').popular
+        header.popular__header
+            h2.popular__title Популярные модели
+            a(href="#").popular__link Смотреть все
+        section.popular__watches
+            - let popular = require('../data/popular.js')
+            each watch in popular
+                +popular-watch(watch).popular__watch
