@@ -3,7 +3,12 @@ include ../svg-icon/svg-icon
 include ../button/button
 
 mixin main-banner
-    +positioner('section').main-banner
+    +positioner('article').main-banner
+        section.main-banner__information
+            h1.main-banner__title.main-banner__title_large Весна/Лето 2019
+            h2.main-banner__title Коллекция
+            p.main-banner__text Швейцарские часы в наличии в Москве и с доставкой по всему миру
+            +button('Смотреть каталог', 'a').main-banner__button(href='#')
         .main-banner__icons
             a(href="https://www.instagram.com/ivan.podgornov/").main-banner__link
                 +svg-icon('instagram').main-banner__icon
@@ -11,11 +16,6 @@ mixin main-banner
                 +svg-icon('twitter').main-banner__icon
             a(href="#").main-banner__link
                 +svg-icon('facebook').main-banner__icon
-        section.main-banner__information
-            h1.main-banner__title.main-banner__title_large Весна/Лето 2019
-            h2.main-banner__title Коллекция
-            p.main-banner__text Швейцарские часы в наличии в Москве и с доставкой по всему миру
-            +button('Смотреть каталог').main-banner__button
         .main-banner__container-image
             span.main-banner__price 22 000 ₽
             img(src="/img/watch_main.png", alt="часы весна-лето 2019").main-banner__image

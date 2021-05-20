@@ -1,8 +1,9 @@
 .main-banner {
+    position: relative;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    margin-bottom: 7.60683%;
 }
 
 @media screen and (min-width: 720px) {
@@ -14,33 +15,38 @@
 @media screen and (min-width: 1024px) {
     .main-banner {
         flex-wrap: nowrap;
-        flex-direction: row-reverse;
+        flex-direction: row;
         justify-content: flex-end;
     }
 }
 
+@media screen and (min-width: 1200px) {
+    .main-banner__information {
+        width: 60%;
+    }
+}
+
 .main-banner__icons {
+    position: absolute;
+    top: 10px;
+    right: 0;
     order: -2;
     display: flex;
-    flex-direction: column;
     align-items: center;
+}
+
+@media screen and (min-width: 720px) {
+    .main-banner__icons {
+        position: relative;
+        flex-direction: column;
+    }
+}
+
+.main-banner__link {
     margin-right: 10px;
 }
 
-@media screen and (min-width: 1024px) {
-    .main-banner__icons {
-        order: 1;
-        margin-right: 80px;
-    }
-}
-
-@media screen and (min-width: 1250px) {
-    .main-banner__icons {
-        margin-right: 102px;
-    }
-}
-
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 720px) {
     .main-banner__information {
         margin-left: 30px;
     }
@@ -100,49 +106,31 @@
     }
 }
 
+@media screen and (max-width: 719px) {
+    .main-banner__button {
+        display: none;
+    }
+}
+
 .main-banner__container-image {
     position: relative;
     margin-left: auto;
-    width: 240px;
-    height: 240px;
-    order: -1;
-    background-image: url('/img/watch-main-background.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 0 0;
+    width: 85%;
+    font-family: 'Prata';
     font-weight: 300;
     font-size: 14px;
     color: #1B1A17;
 }
 
-@media screen and (min-width: 375px) {
-    .main-banner__container-image {
-        width: 270px;
-        height: 270px;
-    }
-}
-
-@media screen and (min-width: 425px) {
-    .main-banner__container-image {
-        width: 300px;
-        height: 300px;
-    }
-}
-
-@media screen and (min-width: 540px) {
-    .main-banner__container-image {
-        width: 400px;
-        height: 380px;
-        background-position: 0px 0;
-        font-size: 16px;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .main-banner__container-image {
-        width: 550px;
-        height: 550px;
-    }
+.main-banner__container-image::before {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-bottom: 100%;
+    background-image: url('./watch-main-background.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
 }
 
 @media screen and (min-width: 1280px) {
@@ -153,28 +141,26 @@
 
 .main-banner__price {
     position: absolute;
-    top: 30px;
-    left: 35px;
+    top: 15%;
+    left: 20%;
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 425px) {
     .main-banner__price {
-        top: 40px;
-        left: 45px;
+        left: 27%;
     }
 }
 
-@media screen and (min-width: 540px) {
+@media screen and (min-width: 600px) {
     .main-banner__price {
-        top: 60px;
-        left: 85px;
+        font-size: 16px;
     }
 }
 
 @media screen and (min-width: 1024px) {
     .main-banner__price {
         top: 100px;
-        left: 80px;
+        left: 15%;
     }
 
     .main-banner__price::after {
@@ -190,34 +176,28 @@
 .main-banner__diametr {
     position: absolute;
     width: 40px;
-    bottom: 20px;
-    right: 15px;
+    bottom: 10%;
+    left: 20%;
 }
 
 @media screen and (min-width: 425px) {
     .main-banner__diametr {
         width: 120px;
-        bottom: 30px;
+        left: 23%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .main-banner__diametr {
+        width: 120px;
         right: -20px;
-    }
-}
-
-@media screen and (min-width: 425px) {
-    .main-banner__diametr {
-        width: 60px;
-    }
-}
-
-@media screen and (min-width: 720px) {
-    .main-banner__diametr {
-        width: 120px;
-        right: -50px;
+        font-size: 16px;
     }
 }
 
 @media screen and (min-width: 1024px) {
     .main-banner__diametr {
-        left: 462px;
+        left: 85%;
         bottom: 60px;
     }
 
@@ -238,12 +218,14 @@
 }
 
 .main-banner__image {
-    height: 106%;
+    position: absolute;
+    top: -2%;
+    left: 0;
+    height: 105%;
     margin-left: 60px;
-    margin-top: -10px;
 }
 
-@media screen and (min-width: 540px) {
+@media screen and (min-width: 425px) {
     .main-banner__image {
         margin-left: 130px;
     }

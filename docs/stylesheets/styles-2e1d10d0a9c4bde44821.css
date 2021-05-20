@@ -590,12 +590,14 @@ body {
     font-size: 14px;
 }
 .button {
+    display: inline-block;
     text-transform: uppercase;
     padding: 24px 56px;
     border-radius: 0;
     border: 0;
     font-weight: bold;
     font-size: 12px;
+    text-decoration: none;
     background-color: #31302C;
     color: white;
     cursor: pointer;
@@ -841,10 +843,11 @@ body {
     margin-bottom: 20px;
 }
 .main-banner {
+    position: relative;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    margin-bottom: 7.60683%;
 }
 
 @media screen and (min-width: 720px) {
@@ -856,33 +859,38 @@ body {
 @media screen and (min-width: 1024px) {
     .main-banner {
         flex-wrap: nowrap;
-        flex-direction: row-reverse;
+        flex-direction: row;
         justify-content: flex-end;
     }
 }
 
+@media screen and (min-width: 1200px) {
+    .main-banner__information {
+        width: 60%;
+    }
+}
+
 .main-banner__icons {
+    position: absolute;
+    top: 10px;
+    right: 0;
     order: -2;
     display: flex;
-    flex-direction: column;
     align-items: center;
+}
+
+@media screen and (min-width: 720px) {
+    .main-banner__icons {
+        position: relative;
+        flex-direction: column;
+    }
+}
+
+.main-banner__link {
     margin-right: 10px;
 }
 
-@media screen and (min-width: 1024px) {
-    .main-banner__icons {
-        order: 1;
-        margin-right: 80px;
-    }
-}
-
-@media screen and (min-width: 1250px) {
-    .main-banner__icons {
-        margin-right: 102px;
-    }
-}
-
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 720px) {
     .main-banner__information {
         margin-left: 30px;
     }
@@ -942,49 +950,31 @@ body {
     }
 }
 
+@media screen and (max-width: 719px) {
+    .main-banner__button {
+        display: none;
+    }
+}
+
 .main-banner__container-image {
     position: relative;
     margin-left: auto;
-    width: 240px;
-    height: 240px;
-    order: -1;
-    background-image: url('/img/watch-main-background.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 0 0;
+    width: 85%;
+    font-family: 'Prata';
     font-weight: 300;
     font-size: 14px;
     color: #1B1A17;
 }
 
-@media screen and (min-width: 375px) {
-    .main-banner__container-image {
-        width: 270px;
-        height: 270px;
-    }
-}
-
-@media screen and (min-width: 425px) {
-    .main-banner__container-image {
-        width: 300px;
-        height: 300px;
-    }
-}
-
-@media screen and (min-width: 540px) {
-    .main-banner__container-image {
-        width: 400px;
-        height: 380px;
-        background-position: 0px 0;
-        font-size: 16px;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .main-banner__container-image {
-        width: 550px;
-        height: 550px;
-    }
+.main-banner__container-image::before {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-bottom: 100%;
+    background-image: url(/conquest/images/components/main-banner//watch-main-background-2a207e8ca54d6e921eed745ab1166b50.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
 }
 
 @media screen and (min-width: 1280px) {
@@ -995,28 +985,26 @@ body {
 
 .main-banner__price {
     position: absolute;
-    top: 30px;
-    left: 35px;
+    top: 15%;
+    left: 20%;
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 425px) {
     .main-banner__price {
-        top: 40px;
-        left: 45px;
+        left: 27%;
     }
 }
 
-@media screen and (min-width: 540px) {
+@media screen and (min-width: 600px) {
     .main-banner__price {
-        top: 60px;
-        left: 85px;
+        font-size: 16px;
     }
 }
 
 @media screen and (min-width: 1024px) {
     .main-banner__price {
         top: 100px;
-        left: 80px;
+        left: 15%;
     }
 
     .main-banner__price::after {
@@ -1032,34 +1020,28 @@ body {
 .main-banner__diametr {
     position: absolute;
     width: 40px;
-    bottom: 20px;
-    right: 15px;
+    bottom: 10%;
+    left: 20%;
 }
 
 @media screen and (min-width: 425px) {
     .main-banner__diametr {
         width: 120px;
-        bottom: 30px;
+        left: 23%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .main-banner__diametr {
+        width: 120px;
         right: -20px;
-    }
-}
-
-@media screen and (min-width: 425px) {
-    .main-banner__diametr {
-        width: 60px;
-    }
-}
-
-@media screen and (min-width: 720px) {
-    .main-banner__diametr {
-        width: 120px;
-        right: -50px;
+        font-size: 16px;
     }
 }
 
 @media screen and (min-width: 1024px) {
     .main-banner__diametr {
-        left: 462px;
+        left: 85%;
         bottom: 60px;
     }
 
@@ -1080,14 +1062,403 @@ body {
 }
 
 .main-banner__image {
-    height: 106%;
+    position: absolute;
+    top: -2%;
+    left: 0;
+    height: 105%;
     margin-left: 60px;
-    margin-top: -10px;
 }
 
-@media screen and (min-width: 540px) {
+@media screen and (min-width: 425px) {
     .main-banner__image {
         margin-left: 130px;
+    }
+}
+.popular__header {
+    display: block;
+    position: relative;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.popular__title {
+    font-size: 24px;
+    font-family: 'Playfair Display';
+}
+
+@media screen and (min-width: 768px) {
+    .popular__title {
+        font-size: 32px;
+    }
+}
+
+.popular__link {
+    padding-bottom: 11px;
+    color: #444240;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    font-size: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .popular__link {
+        position: absolute;
+        bottom: -10px;
+        right: -10px;
+    }
+}
+
+.popular__link:hover {
+    border-bottom: 1px solid #C4C0B6;
+}
+
+.popular__watches {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.popular__watch {
+    width: 100%;
+    height: 380px;
+    margin-bottom: 3%;
+}
+
+@media screen and (min-width: 640px) {
+    .popular__watch {
+        width: 48%;
+        height: 380px;
+        margin-right: 2%;
+        margin-bottom: 3%;
+    }
+
+    .popular__watch:nth-child(2n) {
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .popular__watch {
+        width: 30%;
+        height: auto;
+        margin-right: 3%;
+        margin-bottom: 3%;
+    }
+
+    .popular__watch:nth-child(2) {
+        width: 67%;
+        margin-right: 0%;
+        height: 467px;
+    }
+
+    .popular__watch:nth-child(3) {
+        width: 48.5%;
+    }
+
+    .popular__watch:nth-child(4) {
+        width: 48.5%;
+        margin-right: 0%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .popular__watch:nth-child(2) .popular-watch__container-image {
+        margin-left: 20%;
+        margin-top: 10px;
+    }
+
+    .popular__watch:nth-child(3) .popular-watch__container-image,
+    .popular__watch:nth-child(4) .popular-watch__container-image {
+        margin-left: 30%;
+    }
+
+    .popular__watch:first-child .popular-watch__image {
+        height: 90%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .popular__watch:first-child .popular-watch__image {
+        height: auto;
+    }
+}
+.popular-watch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Prata';
+    background-color: #FDFDFB;
+}
+
+.popular-watch__header {
+    position: absolute;
+    top: 7%;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.popular-watch__name {
+    margin-bottom: 10px;
+    font-family: 'Playfair Display';
+    font-weight: bold;
+    color: #1B1A17;
+    text-decoration: none;
+    opacity: 82%;
+}
+
+.popular-watch__name:hover {
+    text-decoration: underline;
+}
+
+.popular-watch__container-image {
+    display: flex;
+    align-items: center;
+    height: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+@media screen and (min-width: 1024px) {
+    .popular-watch__container-image {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+}
+
+.popular-watch__container-image_rado-1 {
+    background-image: url(/conquest/images/components/popular-watch//background-1-59ddaaa09623307b21d74abc9ff8f175.png);
+}
+
+@media screen and (min-width: 1024px) {
+    .popular-watch__container-image_rado-1 {
+        background-image: url(/conquest/images/components/popular-watch//background-1-59ddaaa09623307b21d74abc9ff8f175.png);
+        height: 60%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .popular-watch__container-image_rado-1 {
+        background-image: url(/conquest/images/components/popular-watch//background-1-59ddaaa09623307b21d74abc9ff8f175.png);
+        height: 100%;
+    }
+}
+
+.popular-watch__container-image_rado-2 {
+    background-image: url(/conquest/images/components/popular-watch//background-2-ca01e93d713f4ed50ebf1f1787949857.png);
+    background-position: 100% -5px;
+    background-size: 50%;
+}
+
+@media screen and (min-width: 1024px) {
+    .popular-watch__container-image_rado-2 {
+        background-position: 100% 0;
+        background-size: 47%;
+    }
+}
+
+.popular-watch__container-image_bvlgari-1 {
+    background-image: url(/conquest/images/components/popular-watch//background-3-d98bf8d62c262edcbe89058e4e841b68.png);
+}
+
+.popular-watch__container-image_bvlgari-2 {
+    background-image: url(/conquest/images/components/popular-watch//background-4-17f1af66a60d5d2d397799d4244ccb3d.png);
+}
+
+.popular-watch__image {
+    height: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+    .popular-watch__image {
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .popular-watch__image:first-child {
+        height: auto;
+    }
+}
+
+.popular-watch__about {
+    position: absolute;
+    bottom: 7%;
+    left: 21%;
+    color: #1B1A17;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .popular-watch__about {
+        bottom: 7%;
+        left: 88px;
+    }
+}
+
+.popular-watch__about:hover {
+    text-decoration: underline;
+}
+
+.popular-watch__line {
+    position: absolute;
+    top: 50%;
+    left: -40px;
+}
+.line {
+    width: 30px;
+    height: 1px;
+    background-color: #8B8371;
+    vertical-align: middle;
+}
+.banner {
+    position: relative;
+    background: linear-gradient(to right, #F7F5EF 35%, #FDFDFB 35%);
+}
+
+@media screen and (min-width: 600px) {
+    .banner::before,
+    .banner::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 365px;
+        background-image: url(/conquest/images/components/banner//background-up-a03ffe929b89410711bc82e3fcfc1d60.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: '';
+    }
+    
+    .banner::after {
+        top: auto;
+        width: 200px;
+        height: 110%;
+        bottom: 0px;
+        right: 0;
+        background-position: 70px 145px;
+        background-image: url(/conquest/images/components/banner//background-down-e59199d14cefa4822c55fdd1df3456a3.png);
+    }
+}
+
+.banner__container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-top: 4.4444444%;
+    padding-bottom: 14%;
+}
+
+@media screen and (min-width: 600px) {
+    .banner__container {
+        flex-direction: row;
+        padding-bottom: 4.444444%;
+    }
+}
+
+.banner__container-img {
+    width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+    .banner__container-img {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .banner__container-img {
+        width: 44.53%;
+    }
+}
+
+.banner__image {
+    width: 100%;
+}
+
+.banner__slider {
+    position: absolute;
+    bottom: 3%;
+    right: 20px;
+    margin-left: auto;
+}
+
+@media screen and (min-width: 425px) {
+    .banner__slider {
+        bottom: 4%;
+        right: 35px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .banner__slider {
+        bottom: 5%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .banner__slider {
+        bottom: 4.2%;
+        left: 37%;
+    }
+}
+
+.banner__button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.banner__button_prev {
+    transform: rotate(90deg);
+}
+
+.banner__number {
+    margin: 0 20px;
+    font-family: 'Prata';
+}
+
+.banner__button_next {
+    transform: rotate(-90deg);
+}
+
+.banner__container-text {
+    width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+    .banner__container-text {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .banner__container-text {
+        width: 34%;
+    }
+}
+
+.banner__title {
+    font-family: 'Playfair Display';
+    margin-bottom: 9.54773%;
+}
+
+.banner__text {
+    margin-bottom: 11.25%;
+}
+
+.banner__button-link {
+    display: none;
+    background-color: #D4B098;
+}
+
+@media screen and (min-width: 768px) {
+    .banner__button-link {
+        display: inline-block;;
     }
 }
 *, *::before, *::after {

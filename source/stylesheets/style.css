@@ -12,6 +12,10 @@
 @import "../components/slider/slider.css";
 @import "../components/footer/footer.css";
 @import "../components/main-banner/main-banner.css";
+@import "../components/popular/popular.css";
+@import "../components/popular-watch/popular-watch.css";
+@import "../components/line/line.css";
+@import "../components/banner/banner.css";
 
 
 *, *::before, *::after {

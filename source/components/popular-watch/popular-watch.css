@@ -1,0 +1,127 @@
+.popular-watch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Prata';
+    background-color: #FDFDFB;
+}
+
+.popular-watch__header {
+    position: absolute;
+    top: 7%;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.popular-watch__name {
+    margin-bottom: 10px;
+    font-family: 'Playfair Display';
+    font-weight: bold;
+    color: #1B1A17;
+    text-decoration: none;
+    opacity: 82%;
+}
+
+.popular-watch__name:hover {
+    text-decoration: underline;
+}
+
+.popular-watch__container-image {
+    display: flex;
+    align-items: center;
+    height: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+@media screen and (min-width: 1024px) {
+    .popular-watch__container-image {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+}
+
+.popular-watch__container-image_rado-1 {
+    background-image: url('./background-1.png');
+}
+
+@media screen and (min-width: 1024px) {
+    .popular-watch__container-image_rado-1 {
+        background-image: url('./background-1.png');
+        height: 60%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .popular-watch__container-image_rado-1 {
+        background-image: url('./background-1.png');
+        height: 100%;
+    }
+}
+
+.popular-watch__container-image_rado-2 {
+    background-image: url('./background-2.png');
+    background-position: 100% -5px;
+    background-size: 50%;
+}
+
+@media screen and (min-width: 1024px) {
+    .popular-watch__container-image_rado-2 {
+        background-position: 100% 0;
+        background-size: 47%;
+    }
+}
+
+.popular-watch__container-image_bvlgari-1 {
+    background-image: url('./background-3.png');
+}
+
+.popular-watch__container-image_bvlgari-2 {
+    background-image: url('./background-4.png');
+}
+
+.popular-watch__image {
+    height: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+    .popular-watch__image {
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .popular-watch__image:first-child {
+        height: auto;
+    }
+}
+
+.popular-watch__about {
+    position: absolute;
+    bottom: 7%;
+    left: 21%;
+    color: #1B1A17;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .popular-watch__about {
+        bottom: 7%;
+        left: 88px;
+    }
+}
+
+.popular-watch__about:hover {
+    text-decoration: underline;
+}
+
+.popular-watch__line {
+    position: absolute;
+    top: 50%;
+    left: -40px;
+}
