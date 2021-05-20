@@ -31,8 +31,6 @@
     top: 10px;
     right: 0;
     order: -2;
-    display: flex;
-    align-items: center;
 }
 
 @media screen and (min-width: 720px) {
@@ -42,19 +40,15 @@
     }
 }
 
-.main-banner__link {
-    margin-right: 10px;
-}
-
 @media screen and (min-width: 720px) {
     .main-banner__information {
         margin-left: 30px;
     }
 }
-
+/* 
 .main-banner__link {
     margin-top: 10px;
-}
+} */
 
 .main-banner__title {
     font-family: 'Playfair Display';
