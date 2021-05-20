@@ -7,5 +7,7 @@ mixin popular
             a(href="#").popular__link Смотреть все
         section.popular__watches
             - let popular = require('../data/popular.js')
-            each watch in popular
-                +popular-watch(watch).popular__watch
+            +popular-watch(popular[0], 'rado-1').popular__watch
+            +popular-watch(popular[1], 'rado-2').popular__watch
+            +popular-watch(popular[3], 'bvlgari-1').popular__watch
+            +popular-watch(popular[2], 'bvlgari-2').popular__watch

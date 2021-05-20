@@ -25,6 +25,10 @@
     opacity: 82%;
 }
 
+.popular-watch__name:hover {
+    text-decoration: underline;
+}
+
 .popular-watch__container-image {
     display: flex;
     align-items: center;
@@ -44,6 +48,20 @@
 
 .popular-watch__container-image_rado-1 {
     background-image: url('./background-1.png');
+}
+
+@media screen and (min-width: 1024px) {
+    .popular-watch__container-image_rado-1 {
+        background-image: url('./background-1.png');
+        height: 60%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .popular-watch__container-image_rado-1 {
+        background-image: url('./background-1.png');
+        height: 100%;
+    }
 }
 
 .popular-watch__container-image_rado-2 {
@@ -77,6 +95,12 @@
     }
 }
 
+@media screen and (min-width: 1024px) {
+    .popular-watch__image:first-child {
+        height: auto;
+    }
+}
+
 .popular-watch__about {
     position: absolute;
     bottom: 7%;
@@ -90,6 +114,10 @@
         bottom: 7%;
         left: 88px;
     }
+}
+
+.popular-watch__about:hover {
+    text-decoration: underline;
 }
 
 .popular-watch__line {

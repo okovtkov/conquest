@@ -17,7 +17,7 @@ let popular = [
         name: 'BVLGARI',
         price: 81700,
         image: '/img/main_watch_3.png',
-        mod: 'bvlgari-2'
+        mod: 'bvlgari-1'
     },
     {
         name: 'BVLGARI',

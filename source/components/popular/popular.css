@@ -94,4 +94,14 @@
     .popular__watch:nth-child(4) .popular-watch__container-image {
         margin-left: 30%;
     }
+
+    .popular__watch:first-child .popular-watch__image {
+        height: 90%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .popular__watch:first-child .popular-watch__image {
+        height: auto;
+    }
 }
