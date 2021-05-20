@@ -1,0 +1,147 @@
+.contacts {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5.86%;
+    margin-bottom: 15%; 
+}
+
+@media screen and (min-width: 768px) {
+    .contacts {
+        flex-direction: row;
+        margin-bottom: 5.86%;
+    }
+}
+
+.contacts__container-text {
+    width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+    .contacts__container-text {
+        width: 50%;
+    }
+}
+
+.contacts__title {
+    text-align: center;
+    font-size: 18px;
+}
+
+@media screen and (min-width: 600px) {
+    .contacts__title {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .contacts__title {
+        text-align: left;
+        font-size: 30px;
+    }
+}
+
+.contacts__text {
+    width: 90%;
+    margin-top: 10.64%;
+    margin-bottom: 13.83%;
+    margin-left: 10%;
+}
+
+@media screen and (min-width: 600px) {
+    .contacts__text {
+        width: 100%;
+        margin-top: 7.7%;
+        margin-bottom: 3%;
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .contacts__text {
+        margin-bottom: 9%;
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .contacts__text {
+        width: 70%;
+    }
+}
+
+.contacts .social-networks__link {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 600px) {
+    .contacts .social-networks__link {
+        margin-right: 18px;
+        margin-bottom: 20px;
+    }
+}
+
+.contacts .social-networks {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 600px) {
+    .contacts .social-networks {
+        position: relative;
+        top: 0;
+        left: 0;
+        flex-direction: row;
+    }
+}
+
+.contacts__container-img {
+    display: flex;
+    width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+    .contacts__container-img {
+        width: 50%;
+    }
+}
+
+.contacts__container-img_left {
+    margin-right: 10px;
+    width: 63%;
+}
+
+@media screen and (min-width: 1024px) {
+    .contacts__container-img_left {
+        width: 64%;
+    }
+}
+
+.contacts__container-img_right {
+    width: 100%;
+}
+
+.contacts__image {
+    display: inline-block;
+    max-width: 100%;
+}
+
+.contacts__container-img_right .contacts__image {
+    max-width: 100%;
+}
+
+.contacts__container-img_left .contacts__image:first-child {
+    margin-bottom: 6px;
+}
+
+@media screen and (min-width: 1024px) {
+    .contacts__image {
+        max-width: auto;
+    }
+}

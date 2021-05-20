@@ -1,0 +1,17 @@
+include ../social-networks/social-networks
+include ../positioner/positioner
+
+mixin contacts
+    +positioner('article').contacts
+        .contacts__container-text
+            h2.contacts__title Следите за нашими новостями
+            p.contacts__text Подписывайтесь на 
+                b @conquest_watch 
+                | в соцсетях и узнавайте о новинках и акциях первыми.
+            +social-networks
+        .contacts__container-img
+            .contacts__container-img_left
+                img(src="/img/contacts_1.jpg", alt="наручные часы").contacts__image
+                img(src="/img/contacts_2.jpg", alt="наручные часы").contacts__image
+            .contacts__container-img_right
+                img(src="/img/contacts_3.jpg", alt="наручные часы").contacts__image

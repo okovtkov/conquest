@@ -1,6 +1,7 @@
 include ../positioner/positioner
 include ../svg-icon/svg-icon
 include ../button/button
+include ../social-networks/social-networks
 
 mixin main-banner
     +positioner('article').main-banner
@@ -9,13 +10,7 @@ mixin main-banner
             h2.main-banner__title Коллекция
             p.main-banner__text Швейцарские часы в наличии в Москве и с доставкой по всему миру
             +button('Смотреть каталог', 'a').main-banner__button(href='#')
-        .main-banner__icons
-            a(href="https://www.instagram.com/ivan.podgornov/").main-banner__link
-                +svg-icon('instagram').main-banner__icon
-            a(href="https://vk.com/ivan.podgornov").main-banner__link
-                +svg-icon('twitter').main-banner__icon
-            a(href="#").main-banner__link
-                +svg-icon('facebook').main-banner__icon
+        +social-networks.main-banner__icons
         .main-banner__container-image
             span.main-banner__price 22 000 ₽
             img(src="/img/watch_main.png", alt="часы весна-лето 2019").main-banner__image
