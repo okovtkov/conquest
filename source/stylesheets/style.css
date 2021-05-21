@@ -19,6 +19,7 @@
 @import "../components/banner/banner.css";
 @import "../components/contacts/contacts.css";
 @import "../components/select/select.css";
+@import "../components/filter/filter.css";
 
 
 *, *::before, *::after {
