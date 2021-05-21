@@ -1,0 +1,118 @@
+.select {
+    position: relative;
+    margin-top: 5px;
+    color: #BDB9B5;
+    cursor: pointer;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding-right: 15px;
+    border-radius: 10px;
+}
+
+.select:focus .select__options {
+    display: block;
+    border: 1px solid gray;
+}
+
+.select:hover,
+.select__option:hover {
+    background-color: rgba(211, 211, 211, 0.3);
+}
+
+@media screen and (min-width: 580px) {
+    .select:hover {
+        background-color: transparent;
+    }
+}
+
+@media screen and (min-width: 580px) {
+    .select {
+        border: none;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .select {
+        padding-right: 5px;
+    }
+}
+
+.select > svg {
+    display: none;
+}
+
+@media screen and (min-width: 424px) {
+    .select > svg {
+        display: inline-block;
+        position: absolute;
+        margin-top: -3px;
+    }
+}
+
+@media screen and (max-width: 579px) {
+    .select > svg {
+        width: 20px;
+        height: 20px;
+        background-size: 20px;
+        top: 18px;
+        right: 8px;
+    }
+}
+
+@media screen and (min-width: 580px) {
+    .select > svg {
+        position: absolute;
+        margin-top: 7px;
+        margin-left: 5%;
+    }
+}
+
+.select__options,
+.select__option_active {
+    color: black;
+}
+
+.select__options {
+    display: none;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 105%;
+    background-color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+    .select__options {
+        top: -3px;
+        left: 52%;
+        width: 54%;
+    }
+}
+
+.select__option {
+    position: relative;
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.select__option svg {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 14px;
+    right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .select__option svg {
+        top: 14px;
+        right: 6px;
+    }
+}
+
+.select__option_asc svg {
+    transform: rotate(180deg);
+}

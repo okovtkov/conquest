@@ -18,6 +18,7 @@
 @import "../components/line/line.css";
 @import "../components/banner/banner.css";
 @import "../components/contacts/contacts.css";
+@import "../components/select/select.css";
 
 
 *, *::before, *::after {
