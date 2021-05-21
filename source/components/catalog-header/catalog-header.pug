@@ -1,5 +1,6 @@
+include ../select/select
+
 mixin catalog-header
     +positioner.catalog-header
         h1.catalog-header__title Мужские часы
-        .catalog-header__sort Сортировать по: 
-            span.catalog-header__option популярности
+        +select
