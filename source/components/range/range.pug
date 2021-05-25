@@ -1,0 +1,7 @@
+mixin range(min, max)
+    .range(data-min=min data-max=max)
+        .range__strip
+            .range__ball.range__ball_min
+                input(type="number" value=min max=(max - 1) step="1000").range__price.range__price_min
+            .range__ball.range__ball_max
+                input(type="number" value=max min=(min + 1) step="1000").range__price.range__price_max
