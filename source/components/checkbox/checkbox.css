@@ -1,0 +1,41 @@
+.checkbox {
+    display: table;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.checkbox__input {
+    display: none;
+}
+
+.checkbox__name svg {
+    display: none;
+}
+
+.checkbox__input:checked ~ .checkbox__name svg {
+    position: absolute;
+    top: 4px;
+    left: 1px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+}
+
+.checkbox__name {
+    position: relative;
+    padding-left: 25px;
+}
+
+.checkbox__name::before {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 13px;
+    height: 13px;
+    border: 1px solid #909090;
+    content: '';
+}
+
+.checkbox__input:checked ~ .checkbox__name::before {
+    background-color: #909090;
+}

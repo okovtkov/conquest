@@ -1,2 +1,35 @@
+include ../positioner/positioner
+include ../range/range
+include ../checkbox/checkbox
+
 mixin filter
-    .filter
+    aside.filter
+        form.filter__form(name='filter')
+            details.filter__details
+                summary.filter__name Стоимость
+                +range(0, 130000)
+            details.filter__details
+                summary.filter__name Бренд
+                +checkbox('Techne', 'Techne')
+                +checkbox('Rado', 'Rado')
+                +checkbox('Bvlgari', 'Bvlgari')
+                +checkbox('Tissot', 'Tissot')
+                +checkbox('Omega', 'Omega')
+                +checkbox('Montblanc', 'Montblanc')
+            details.filter__details
+                summary.filter__name Механизм
+                +checkbox('Механический', 'Механический')
+                +checkbox('Кварцевый', 'Кварцевый')
+            details.filter__details
+                summary.filter__name Материал
+                +checkbox('Сталь', 'Сталь')
+                +checkbox('Титан', 'Титан')
+                +checkbox('Пластик', 'Пластик')
+                +checkbox('Латунь', 'Латунь')
+            details.filter__details
+                summary.filter__name Цвет
+                +checkbox('Золотой', 'Золотой')
+                +checkbox('Серебряный', 'Серебряный')
+                +checkbox('Черный', 'Черный')
+                +checkbox('Зеленый', 'Зеленый')
+                +checkbox('Темно-коричневый', 'Темно-коричневый')
