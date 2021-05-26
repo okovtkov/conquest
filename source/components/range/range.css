@@ -1,3 +1,19 @@
+.range {
+    width: 88%;
+}
+
+@media screen and (min-width: 375px) {
+    .range {
+        margin-left: 10px;
+    }
+}
+
+@media screen and (min-width: 580px) {
+    .range {
+        margin-left: 0px;
+    }
+}
+
 .range__strip {
     position: relative;
     width: 100%;

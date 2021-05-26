@@ -1,6 +1,8 @@
 .select {
     position: relative;
     margin-top: 5px;
+    margin-left: auto;
+    width: 54%;
     color: #BDB9B5;
     cursor: pointer;
     text-align: center;
@@ -8,6 +10,12 @@
     border: 1px solid rgba(0, 0, 0, 0.5);
     padding-right: 15px;
     border-radius: 10px;
+}
+
+@media screen and (min-width: 580px) {
+    .select {
+        margin-left: 0;
+    }
 }
 
 .select:focus .select__options {
@@ -26,8 +34,15 @@
     }
 }
 
+@media screen and (min-width: 425px) {
+    .select {
+        width: 48%;
+    }
+}
+
 @media screen and (min-width: 580px) {
     .select {
+        width: auto;
         border: none;
     }
 }
@@ -80,6 +95,7 @@
     left: -2px;
     width: 105%;
     background-color: #fff;
+    z-index: 3;
 }
 
 @media screen and (min-width: 768px) {

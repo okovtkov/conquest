@@ -1,9 +1,11 @@
-include ../positioner/positioner
+include ../svg-icon/svg-icon
 include ../range/range
 include ../checkbox/checkbox
 
 mixin filter
     aside.filter
+        button.filter__button
+            +svg-icon('filter')
         form.filter__form(name='filter')
             details.filter__details
                 summary.filter__name Стоимость
