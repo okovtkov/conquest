@@ -8,4 +8,5 @@ mixin watch-card(watch)
                 +svg-icon('favourite')
             button.watch-card__basket
                 +svg-icon('basket')
-        img.watch-card__image(src=watch.image, alt=`часы ${watch.name}`)
+        .watch-card__container-img
+            img.watch-card__image(src=watch.image, alt=`часы ${watch.name}`)

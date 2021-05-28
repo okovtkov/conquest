@@ -18,10 +18,12 @@
 @import "../components/line/line.css";
 @import "../components/banner/banner.css";
 @import "../components/contacts/contacts.css";
+@import "../components/catalog/catalog.css";
 @import "../components/select/select.css";
 @import "../components/filter/filter.css";
 @import "../components/checkbox/checkbox.css";
 @import "../components/range/range.css";
+@import "../components/catalog-container/catalog-container.css";
 
 
 *, *::before, *::after {

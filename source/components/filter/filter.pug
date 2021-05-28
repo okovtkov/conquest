@@ -1,13 +1,14 @@
 include ../svg-icon/svg-icon
 include ../range/range
 include ../checkbox/checkbox
+include ../button/button
 
 mixin filter
     aside.filter
         button.filter__button
             +svg-icon('filter')
         form.filter__form(name='filter')
-            details.filter__details
+            details.filter__details(open='open')
                 summary.filter__name Стоимость
                 +range(0, 130000)
             details.filter__details
@@ -35,3 +36,4 @@ mixin filter
                 +checkbox('Черный', 'Черный')
                 +checkbox('Зеленый', 'Зеленый')
                 +checkbox('Темно-коричневый', 'Темно-коричневый')
+            +button('', 'input type="reset" value="СБРОСИТЬ ФИЛЬТР"').filter__reset
