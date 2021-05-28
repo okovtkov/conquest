@@ -58,6 +58,11 @@
     transform: scale(1.1);
 }
 
-.watch-card__image {
+.watch-card__container-img {
     text-align: center;
+    margin: auto;
+}
+
+.watch-card__image {
+    margin: 0;
 }

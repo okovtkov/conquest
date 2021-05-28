@@ -1,17 +1,27 @@
 .filter {
     position: relative;
+    display: inline-block;
     width: 100%;
+    margin-bottom: 20px;
 }
 
 @media screen and (min-width: 580px) {
     .filter {
-        width: 30%;
+        width: 40%;
+        margin-right: 4%;
     }
 }
 
 @media screen and (min-width: 1024px) {
     .filter {
-        width: 19.75%;
+        margin-top: 10px;
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .filter {
+        width: 25%;
     }
 }
 
@@ -46,7 +56,15 @@
 
 @media screen and (min-width: 580px) {
     .filter__form {
+        position: sticky;
+        top: 100px;
         display: inline-block;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .filter__form {
+        top: 50px;
     }
 }
 
@@ -87,4 +105,39 @@
 .filter__name {
     display: table;
     cursor: pointer;
+}
+
+.filter__reset {
+    border: 2px solid #E7E0CF;
+    background-color: transparent;
+    font-weight: 500;
+    color: black;
+    width: 100%;
+    padding: 10px 0;
+}
+
+@media screen and (min-width: 768px) {
+    .filter__reset {
+        padding: 24px 56px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .filter__reset {
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .filter__reset {
+        padding: 20px 0;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .filter__reset {
+        padding: 24px 56px;
+        width: auto;
+    }
 }

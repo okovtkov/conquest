@@ -2,8 +2,11 @@ include ../components/page/page
 include ../components/catalog-header/catalog-header
 include ../components/catalog/catalog
 include ../components/filter/filter
+include ../components/catalog-container/catalog-container
 
 +page
     +catalog-header
     +catalog
         +filter
+        - let watches = require('../data/watches.js');
+        +catalog-container(watches)

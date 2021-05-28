@@ -1,0 +1,11 @@
+.catalog {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 580px) {
+    .catalog {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
