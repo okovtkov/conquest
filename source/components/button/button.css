@@ -11,4 +11,5 @@
     background-color: #31302C;
     color: white;
     cursor: pointer;
+    white-space: nowrap;
 }

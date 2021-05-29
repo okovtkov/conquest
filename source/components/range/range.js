@@ -6,15 +6,15 @@ class Ball {
         /** @type {HTMLElement} */
         this.strip = strip;
 
-        this.element.addEventListener('mousedown', () => this.start());
+        this.element.addEventListener('pointerdown', () => this.start());
     }
 
     start() {
         let moveHandler = (event) => this.move(event);
-        document.addEventListener('mousemove', moveHandler);
-        document.addEventListener('mouseup', function mouseUp() {
-            document.removeEventListener('mouseup', mouseUp);
-            document.removeEventListener('mousemove', moveHandler);
+        document.addEventListener('pointermove', moveHandler);
+        document.addEventListener('pointerup', function pointerUp() {
+            document.removeEventListener('pointerup', pointerUp);
+            document.removeEventListener('pointermove', moveHandler);
         });
     }
 
@@ -61,6 +61,7 @@ class Range {
         this.minBall.element.style.left = price / this.maxPrice * 100 + '%';
         maxInput.min = price;
         minInput.value = price;
+        this.smallRange();
     }
 
     maxMove(value) {
@@ -70,6 +71,7 @@ class Range {
         this.maxBall.element.style.left = price / this.maxPrice * 100 + '%';
         minInput.max = price;
         maxInput.value = price;
+        this.smallRange();
     }
 
     coordToPrice(event) {
@@ -84,6 +86,13 @@ class Range {
         let maxInput = this.element.querySelector('.range__price_max');
         minInput.disabled = true;
         maxInput.disabled = true;
+    }
+
+    smallRange() {
+        let minInput = this.element.querySelector('.range__price_min');
+        let maxInput = this.element.querySelector('.range__price_max');
+        let diff = maxInput.value - minInput.value;
+        maxInput.classList.toggle('range__price_top', diff < 45000);
     }
 }
 

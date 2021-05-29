@@ -8,32 +8,32 @@ mixin filter
         button.filter__button
             +svg-icon('filter')
         form.filter__form(name='filter')
-            details.filter__details(open='open')
+            details.filter__details
                 summary.filter__name Стоимость
-                +range(0, 130000)
+                +range(0, 130000, 'range')
             details.filter__details
                 summary.filter__name Бренд
-                +checkbox('Techne', 'Techne')
-                +checkbox('Rado', 'Rado')
-                +checkbox('Bvlgari', 'Bvlgari')
-                +checkbox('Tissot', 'Tissot')
-                +checkbox('Omega', 'Omega')
-                +checkbox('Montblanc', 'Montblanc')
+                +checkbox('Techne', 'Techne', 'brand')
+                +checkbox('Rado', 'Rado', 'brand')
+                +checkbox('Bvlgari', 'Bvlgari', 'brand')
+                +checkbox('Tissot', 'Tissot', 'brand')
+                +checkbox('Omega', 'Omega', 'brand')
+                +checkbox('Montblanc', 'Montblanc', 'brand')
             details.filter__details
                 summary.filter__name Механизм
-                +checkbox('Механический', 'Механический')
-                +checkbox('Кварцевый', 'Кварцевый')
+                +checkbox('Механический', 'Механический', 'mechanism')
+                +checkbox('Кварцевый', 'Кварцевый', 'mechanism')
             details.filter__details
                 summary.filter__name Материал
-                +checkbox('Сталь', 'Сталь')
-                +checkbox('Титан', 'Титан')
-                +checkbox('Пластик', 'Пластик')
-                +checkbox('Латунь', 'Латунь')
+                +checkbox('Сталь', 'Сталь', 'material')
+                +checkbox('Титан', 'Титан', 'material')
+                +checkbox('Пластик', 'Пластик', 'material')
+                +checkbox('Латунь', 'Латунь', 'material')
             details.filter__details
                 summary.filter__name Цвет
-                +checkbox('Золотой', 'Золотой')
-                +checkbox('Серебряный', 'Серебряный')
-                +checkbox('Черный', 'Черный')
-                +checkbox('Зеленый', 'Зеленый')
-                +checkbox('Темно-коричневый', 'Темно-коричневый')
-            +button('', 'input type="reset" value="СБРОСИТЬ ФИЛЬТР"').filter__reset
+                +checkbox('Золотой', 'Золотой', 'color')
+                +checkbox('Серебряный', 'Серебряный', 'color')
+                +checkbox('Черный', 'Черный', 'color')
+                +checkbox('Зеленый', 'Зеленый', 'color')
+                +checkbox('Темно-коричневый', 'Темно-коричневый', 'color')
+            +button()(type="reset").filter__reset Сбросить фильтр

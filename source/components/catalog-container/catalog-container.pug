@@ -2,10 +2,11 @@ include ../watch-card/watch-card
 
 mixin catalog-container(watches)
     section.catalog-container
-        each watch in watches
+        each watch, index in watches
             +watch-card(watch).catalog-container__item
-        section.catalog-container__item.catalog-container__item_ad
-            .catalog-container__content-text
-                span.catalog-container__percent -20%
-                span.catalog-container__text на вторую позицию в чеке
-            img(src="/img/watch_ad.png", alt="часы для рекламы").catalog-container__image
+            if index === 4
+                section.catalog-container__item.catalog-container__item_ad
+                    .catalog-container__content-text
+                        span.catalog-container__percent -20%
+                        span.catalog-container__text на вторую позицию в чеке
+                    img(src="/img/watch_ad.png", alt="часы для рекламы").catalog-container__image

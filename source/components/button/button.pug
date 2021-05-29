@@ -1,2 +1,3 @@
-mixin button(text, tag = 'button')
-    #{tag}.button&attributes(attributes) #{text}
+mixin button(tag = 'button')
+    #{tag}.button&attributes(attributes)
+        block
