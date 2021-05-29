@@ -6,20 +6,29 @@ class Ball {
         /** @type {HTMLElement} */
         this.strip = strip;
 
-        this.element.addEventListener('pointerdown', () => this.start());
+        this.element.addEventListener('mousedown', () => this.start());
+        this.element.addEventListener('touchstart', () => this.start());
     }
 
     start() {
         let moveHandler = (event) => this.move(event);
-        document.addEventListener('pointermove', moveHandler);
-        document.addEventListener('pointerup', function pointerUp() {
-            document.removeEventListener('pointerup', pointerUp);
-            document.removeEventListener('pointermove', moveHandler);
-        });
+        let stopHandler = (event) => {
+            console.log(event.type);
+            document.removeEventListener('mouseup', stopHandler);
+            document.removeEventListener('touchend', stopHandler);
+            document.removeEventListener('mousemove', moveHandler);
+            document.removeEventListener('touchmove', moveHandler);
+        };
+
+        document.addEventListener('mousemove', moveHandler);
+        document.addEventListener('mouseup', stopHandler);
+        document.addEventListener('touchmove', moveHandler);
+        document.addEventListener('touchend', stopHandler);
     }
 
     move(event) {
-        let x = event.clientX - this.strip.getBoundingClientRect().left;
+        let clientX = event.clientX || event.touches[0].clientX;
+        let x = clientX - this.strip.getBoundingClientRect().left;
         if (x < 0) x = 0;
         if (x > this.strip.clientWidth) x = this.strip.clientWidth;
 
@@ -37,6 +46,8 @@ class Range {
         this.strip = this.element.querySelector('.range__strip');
         this.minBall = new Ball(this.element.querySelector('.range__ball_min'), this.strip);
         this.maxBall = new Ball(this.element.querySelector('.range__ball_max'), this.strip);
+        this.minInput = this.element.querySelector('.range__price_min');
+        this.maxInput = this.element.querySelector('.range__price_max');
 
         this.disableInputs();
         this.minMove(this.minPrice);
@@ -55,22 +66,18 @@ class Range {
     }
 
     minMove(value) {
-        let minInput = this.element.querySelector('.range__price_min');
-        let maxInput = this.element.querySelector('.range__price_max');
-        let price = Math.min(Number(value), Number(maxInput.value));
+        let price = Math.min(Number(value), Number(this.maxInput.value));
         this.minBall.element.style.left = price / this.maxPrice * 100 + '%';
-        maxInput.min = price;
-        minInput.value = price;
+        this.maxInput.min = price;
+        this.minInput.value = price;
         this.smallRange();
     }
 
     maxMove(value) {
-        let minInput = this.element.querySelector('.range__price_min');
-        let maxInput = this.element.querySelector('.range__price_max');
-        let price = Math.max(Number(minInput.value), Number(value));
+        let price = Math.max(Number(this.minInput.value), Number(value));
         this.maxBall.element.style.left = price / this.maxPrice * 100 + '%';
-        minInput.max = price;
-        maxInput.value = price;
+        this.minInput.max = price;
+        this.maxInput.value = price;
         this.smallRange();
     }
 
@@ -82,17 +89,13 @@ class Range {
     }
 
     disableInputs() {
-        let minInput = this.element.querySelector('.range__price_min');
-        let maxInput = this.element.querySelector('.range__price_max');
-        minInput.disabled = true;
-        maxInput.disabled = true;
+        this.minInput.disabled = true;
+        this.maxInput.disabled = true;
     }
 
     smallRange() {
-        let minInput = this.element.querySelector('.range__price_min');
-        let maxInput = this.element.querySelector('.range__price_max');
-        let diff = maxInput.value - minInput.value;
-        maxInput.classList.toggle('range__price_top', diff < 45000);
+        let diff = this.maxInput.value - this.minInput.value;
+        this.maxInput.classList.toggle('range__price_top', diff < 45000);
     }
 }
 
