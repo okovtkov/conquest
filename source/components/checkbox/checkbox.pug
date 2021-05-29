@@ -1,7 +1,7 @@
 include ../svg-icon/svg-icon
 
-mixin checkbox(value, label)
+mixin checkbox(value, label, name)
     label.checkbox
-        input.checkbox__input(type='checkbox' value='#{value}')
+        input.checkbox__input(type='checkbox' name=name value=value)
         span.checkbox__name #{label}
             +svg-icon('check')

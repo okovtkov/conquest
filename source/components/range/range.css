@@ -103,3 +103,7 @@
 .range__price_max {
     right: -30px;
 }
+
+.range__price_top {
+    top: -22px;
+}
