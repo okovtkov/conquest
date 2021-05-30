@@ -24,6 +24,7 @@
 @import "../components/checkbox/checkbox.css";
 @import "../components/range/range.css";
 @import "../components/catalog-container/catalog-container.css";
+@import "../components/catalog-banner/catalog-banner.css";
 
 
 *, *::before, *::after {

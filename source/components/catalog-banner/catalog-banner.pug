@@ -1,0 +1,12 @@
+include ../positioner/positioner
+include ../button/button
+
+mixin catalog-banner
+    section.catalog-banner
+        +positioner
+            header.catalog-banner__header Подписка на рассылку
+            .catalog-banner__content
+                h2.catalog-banner__text Получить скидку 10% на первую покупку
+                label.catalog-banner__email E-mail
+                    input(type="email" name="email").catalog-banner__input
+                +button.catalog-banner__button Подписаться
