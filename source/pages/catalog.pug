@@ -3,6 +3,7 @@ include ../components/catalog-header/catalog-header
 include ../components/catalog/catalog
 include ../components/filter/filter
 include ../components/catalog-container/catalog-container
+include ../components/catalog-banner/catalog-banner
 
 +page
     +catalog-header
@@ -10,3 +11,4 @@ include ../components/catalog-container/catalog-container
         +filter
         - let watches = require('../data/watches.js');
         +catalog-container(watches)
+    +catalog-banner

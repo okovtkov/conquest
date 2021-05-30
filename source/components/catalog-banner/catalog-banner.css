@@ -1,0 +1,147 @@
+.catalog-banner {
+    height: 293px;
+    margin-bottom: 5.9297218%;
+    padding: 10% 0 10% 0;
+    background-image: url('./catalog-banner-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(234, 228, 213, 0.38);
+}
+
+@media screen and (min-width: 425px) {
+    .catalog-banner {
+        padding: 5% 0 50% 0;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .catalog-banner {
+        padding: 5% 0 40% 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .catalog-banner {
+        padding: 8% 0 0 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .catalog-banner {
+        padding: 8% 0 6% 0;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .catalog-banner {
+        padding: 4.83162% 0 6.73499% 0;
+    }
+}
+
+.catalog-banner__header {
+    color: #818181;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.catalog-banner__content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+    .catalog-banner__content {
+        flex-direction: row;
+        align-items: flex-end;
+        flex-wrap: wrap;
+    }
+}
+
+.catalog-banner__text {
+    margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .catalog-banner__text {
+        font-size: 32px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .catalog-banner__text {
+        font-size: 36px;
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .catalog-banner__text {
+        font-size: 45px;
+    }
+}
+
+.catalog-banner__email {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 8%;
+    margin-bottom: 8%;
+    font-size: 14px;
+    color: #444240;
+}
+
+@media screen and (min-width: 540px) {
+    .catalog-banner__email {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .catalog-banner__email {
+        width: 40%;
+        margin-top: 8%;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .catalog-banner__email {
+        width: 23.76%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .catalog-banner__email {
+        margin-left: 8%;
+    }
+}
+
+.catalog-banner__input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #1B1A17;
+    margin-top: 5px;
+}
+
+@media screen and (min-width: 540px) {
+    .catalog-banner__button {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .catalog-banner__button {
+        width: auto;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .catalog-banner__button {
+        width: auto;
+    }
+}
