@@ -1,7 +1,7 @@
 include ../positioner/positioner
 include ../watch-card/watch-card
 
-mixin slider(title, watches)
+mixin slider(title, items)
     +positioner
         h2.title #{title}
     .slider
@@ -10,6 +10,6 @@ mixin slider(title, watches)
         button.slider__button.slider__button_next
             +svg-icon('arrow')
         ul.slider__container
-            each watch in watches
+            each item in items
                 li.slider__item
-                    +watch-card(watch)
+                    +watch-card(item)

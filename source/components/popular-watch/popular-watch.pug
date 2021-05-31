@@ -3,9 +3,9 @@ include ../line/line
 mixin popular-watch(watch, mod)
     section.popular-watch&attributes(attributes)
         header.popular-watch__header
-            a(href="#").popular-watch__name #{watch.name}
+            a(href="/product.html").popular-watch__name #{watch.name}
             span.popular-watch__price #{watch.price} ₽
         div(class=`popular-watch__container-image popular-watch__container-image_${mod}`)
             img(src=`${watch.image}`, alt=`часы ${watch.name}`).popular-watch__image
-        a(href="#").popular-watch__about Подробнее
+        a(href="/product.html").popular-watch__about Подробнее
             +line.popular-watch__line

@@ -1,14 +1,19 @@
 include ../components/page/page
+include ../components/bread-crumbs/bread-crumbs
 include ../components/catalog-header/catalog-header
 include ../components/catalog/catalog
 include ../components/filter/filter
 include ../components/catalog-container/catalog-container
 include ../components/catalog-banner/catalog-banner
+include ../components/slider/slider
 
 +page
+    +bread-crumbs
     +catalog-header
     +catalog
         +filter
         - let watches = require('../data/watches.js');
         +catalog-container(watches)
     +catalog-banner
+    - let bands = require('../data/bands.js')
+    +slider('Ремешки', bands)
