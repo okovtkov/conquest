@@ -50,6 +50,7 @@ class Range {
         this.maxInput = this.element.querySelector('.range__price_max');
 
         this.disableInputs();
+        this.addClearListener();
         this.minMove(this.minPrice);
         this.maxMove(this.maxPrice);
 
@@ -96,6 +97,15 @@ class Range {
     smallRange() {
         let diff = this.maxInput.value - this.minInput.value;
         this.maxInput.classList.toggle('range__price_top', diff < 45000);
+    }
+
+    addClearListener() {
+        let form = this.element.closest('form');
+        if (!form) return;
+        form.addEventListener('reset', () => {
+            this.minMove(this.minPrice);
+            this.maxMove(this.maxPrice);
+        });
     }
 }
 

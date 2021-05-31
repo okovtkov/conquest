@@ -1,11 +1,10 @@
 mixin bread-crumbs(page)
     +positioner('ul').bread-crumbs
         li.bread-crumbs__list
-            a.bread-crumbs__link(href="#") Главная
+            a.bread-crumbs__link(href="/index.html") Главная
         li.bread-crumbs__list
-            a.bread-crumbs__link(href="#") Каталог
+            a.bread-crumbs__link(href="/catalog.html") Каталог
         li.bread-crumbs__list
-            a.bread-crumbs__link(href="#") Мужские часы
+            a.bread-crumbs__link(href="/catalog.html") Мужские часы
         if (page)
-            li.bread-crumbs__list
-                a.bread-crumbs__link(href="#") #{page}
+            li.bread-crumbs__list #{page}
