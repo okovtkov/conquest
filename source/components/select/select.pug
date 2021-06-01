@@ -1,15 +1,15 @@
 include ../svg-icon/svg-icon
 
 mixin select
-    .select(tabindex="0") Сортировать по: 
-        span.select__option_active популярности
+    button.select(tabindex="0") Сортировать по: 
+        .select__option_active популярности
         +svg-icon('arrow')
         .select__options
-            span.select__option.select__option_asc популярности
-                +svg-icon('arrow')
-            span.select__option.select__option_desc популярности
-                +svg-icon('arrow')
-            span.select__option.select__option_asc цене
-                +svg-icon('arrow')
-            span.select__option.select__option_desc цене
-                +svg-icon('arrow')
+            span.select__option.select__option_asc популярности ↑
+                //- +svg-icon('arrow')
+            span.select__option.select__option_desc популярности ↓
+                //- +svg-icon('arrow')
+            span.select__option.select__option_asc цене ↑
+                //- +svg-icon('arrow')
+            span.select__option.select__option_desc цене ↓
+                //- +svg-icon('arrow')

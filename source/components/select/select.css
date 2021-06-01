@@ -10,6 +10,8 @@
     border: 1px solid rgba(0, 0, 0, 0.5);
     padding-right: 15px;
     border-radius: 10px;
+    font-size: 16px;
+    background-color: transparent;
 }
 
 @media screen and (min-width: 580px) {
@@ -18,8 +20,13 @@
     }
 }
 
-.select:focus .select__options {
-    display: block;
+.select__option_active {
+    display: inline-block;
+    width: 120px;
+    margin-left: auto;
+}
+
+.select__options {
     border: 1px solid gray;
 }
 
@@ -101,9 +108,13 @@
 @media screen and (min-width: 768px) {
     .select__options {
         top: -3px;
-        left: 52%;
-        width: 54%;
+        left: 50%;
+        width: 55%;
     }
+}
+
+.select__options_active {
+    display: block;
 }
 
 .select__option {
