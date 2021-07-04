@@ -5,14 +5,15 @@ class ProductList {
         this.element = element;
         this.container = element.querySelector('.product-list__container');
         this.isOpen = false;
+        this.name = element.dataset.name;
         let toggler = element.querySelector('.product-list__button');
 
         toggler.addEventListener('click', () => {
             if (this.isOpen) this.close();
             else this.open();
         });
-        document.addEventListener('add-product', (event) => this.add(event.detail));
-        document.addEventListener('delete-product', (event) => this.delete(event.detail));
+        document.addEventListener(`add-${this.name}-product`, (event) => this.add(event.detail));
+        document.addEventListener(`delete-${this.name}-product`, (event) => this.delete(event.detail));
     }
 
     open() {
@@ -52,15 +53,17 @@ class ProductList {
         let close = li.querySelector('.product-list__close');
         close.addEventListener('click', () => this.delete(product));
         this.sum(product.price);
+        this.count();
     }
 
     delete(product) {
         let li = this.element.querySelector(`.product-list__item[data-id="${product.id}"]`);
         let price = parseFloat(li.querySelector('.product-list__price').textContent);
-        this.sum(-price);
         li.remove();
+        this.sum(-price);
+        this.count();
 
-        let event = new CustomEvent('deleted-product', { detail: product });
+        let event = new CustomEvent(`deleted-${this.name}-product`, { detail: product });
         document.dispatchEvent(event);
     }
 
@@ -75,6 +78,14 @@ class ProductList {
         if (target === this.element) return true;
         if (target === null) return false;
         return this.containsElement(target.parentElement);
+    }
+
+    count() {
+        let count = this.element.querySelector('.product-list__count');
+        let num = Array.from(this.element.querySelectorAll('.product-list__item'));
+        count.textContent = num.length;
+        let display = num <= 0 ? 'none' : 'block';
+        count.style.display = display;
     }
 }
 

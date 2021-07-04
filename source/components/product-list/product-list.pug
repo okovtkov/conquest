@@ -4,7 +4,7 @@ include ../line/line
 include ../button/button
 
 mixin product-list(name)
-    .product-list
+    .product-list(data-name=name)
         button.product-list__button
             +svg-icon(name)
             .product-list__count
