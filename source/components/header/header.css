@@ -31,25 +31,8 @@
 }
 
 .header__item {
-    margin-right: 23px;
-    height: 20px;
-    width: 21px;
-    background-repeat: no-repeat;
-    background-position: left;
+    margin-right: 7%;
     background-color: white;
     border: none;
     outline: none;
-}
-
-.header__item_search {
-    background-image: url('search.svg');
-}
-
-.header__item_favourite {
-    background-image: url('favourite.svg');
-}
-
-.header__item_basket {
-    margin-right: 0;
-    background-image: url('basket.svg');
 }

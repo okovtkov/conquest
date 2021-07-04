@@ -5,3 +5,5 @@ import '../components/watch-info/watch-info.js';
 import '../components/range/range.js';
 import '../components/filter/filter.js';
 import '../components/select/select.js';
+import '../components/watch-card/watch-card.js';
+import '../components/product-list/product-list.js';

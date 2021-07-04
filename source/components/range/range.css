@@ -41,7 +41,7 @@
     top: -2px;
     left: calc(100% + 13px);
     width: 20vw;
-    height: 4px;
+    height: 6px;
     background-color: white;
     z-index: 4;
     content: '';
@@ -64,7 +64,8 @@
     left: 0;
 }
 
-.range__ball_min::after {
+.range__ball_min::after,
+.range__ball_max::after {
     position: absolute;
     top: 4px;
     left: 101%;
@@ -79,13 +80,8 @@
 }
 
 .range__ball_max::after {
-    position: absolute;
-    top: 4px;
     left: 110%;
-    width: 80vw;
-    height: 2px;
     background-color: #D4D4D4;
-    content: '';
 }
 
 .range__price {

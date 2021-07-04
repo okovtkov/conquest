@@ -1,0 +1,15 @@
+include ../svg-icon/svg-icon
+include ../product-saved/product-saved
+include ../line/line
+include ../button/button
+
+mixin product-list(name)
+    .product-list
+        button.product-list__button
+            +svg-icon(name)
+            .product-list__count
+        .product-list__container
+            ul.product-list__list
+            +line.product-list__line
+            span.product-list__sum 0 ₽
+            +button('button').product-list__complete Оформить заказ
