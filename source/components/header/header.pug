@@ -1,6 +1,8 @@
 include ../positioner/positioner
 include ../logo/logo
 include ../navigation/navigation
+include ../search/search
+include ../product-list/product-list
 
 mixin header(options)
     header.header
@@ -8,6 +10,6 @@ mixin header(options)
             +logo.header__logo
             +navigation(options).header__navigation
             .header__items
-                button.header__item.header__item_search
-                button.header__item.header__item_favourite
-                button.header__item.header__item_basket
+                +search.header__item
+                +product-list('favourite').header__item
+                +product-list('basket').header__item

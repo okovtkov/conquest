@@ -25,7 +25,7 @@
 @import "../components/range/range.css";
 @import "../components/catalog-container/catalog-container.css";
 @import "../components/catalog-banner/catalog-banner.css";
-
+@import "../components/product-list/product-list.css";
 
 *, *::before, *::after {
     box-sizing: border-box;

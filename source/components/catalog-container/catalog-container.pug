@@ -3,7 +3,7 @@ include ../watch-card/watch-card
 mixin catalog-container(watches)
     section.catalog-container
         each watch, index in watches
-            +watch-card(watch).catalog-container__item
+            +watch-card(watch).catalog-container__item(data-id=watch.id)
             if index === 4
                 section.catalog-container__item.catalog-container__item_ad
                     .catalog-container__content-text
