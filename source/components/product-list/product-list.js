@@ -6,6 +6,8 @@ class ProductList {
         this.container = element.querySelector('.product-list__container');
         this.isOpen = false;
         this.name = element.dataset.name;
+        this.products = this.loadFromLocalStorage();
+
         let toggler = element.querySelector('.product-list__button');
 
         toggler.addEventListener('click', () => {
@@ -35,8 +37,13 @@ class ProductList {
     }
 
     add(product) {
-        let ul = this.element.querySelector('.product-list__list');
+        this.addToMarkup(product);
+        this.products.push(product);
+        this.saveToLocalStorage();
+    }
 
+    addToMarkup(product) {
+        let ul = this.element.querySelector('.product-list__list');
         let li = document.createElement('li');
         li.classList.add('product-list__item');
         li.dataset.id = product.id;
@@ -44,7 +51,7 @@ class ProductList {
             <img src="${product.image}" class="product-list__image" alt="картинка с заказом">
             <div class="product-list__text">
                 <span class="product-list__name">${product.name}</span>
-                <span class="product-list__price">${product.price}</span>
+                <span class="product-list__price">${product.price} ₽</span>
             </div>
             <button class="product-list__close"></button>
         `;
@@ -54,9 +61,16 @@ class ProductList {
         close.addEventListener('click', () => this.delete(product));
         this.sum(product.price);
         this.count();
+
+        let event = new CustomEvent(`added-${this.name}-product`, { detail: product });
+        document.dispatchEvent(event);
     }
 
     delete(product) {
+        let productIndex = this.products.findIndex((item) => product.id === item.id);
+        this.products.splice(productIndex, 1);
+        this.saveToLocalStorage();
+
         let li = this.element.querySelector(`.product-list__item[data-id="${product.id}"]`);
         let price = parseFloat(li.querySelector('.product-list__price').textContent);
         li.remove();
@@ -86,6 +100,19 @@ class ProductList {
         count.textContent = num.length;
         let display = num <= 0 ? 'none' : 'block';
         count.style.display = display;
+    }
+
+    loadFromLocalStorage() {
+        let json = localStorage.getItem(this.name);
+        if (!json) return [];
+        let products = JSON.parse(json);
+        products.forEach(item => this.addToMarkup(item));
+        return products;
+    }
+
+    saveToLocalStorage() {
+        let json = JSON.stringify(this.products);
+        localStorage.setItem(this.name, json);
     }
 }
 

@@ -16,6 +16,11 @@ class WatchCard {
                 else this.add(target);
             });
 
+            document.addEventListener(`added-${target}-product`, (event) => {
+                if (event.detail.id !== this.id) return;
+                this[target].classList.add(`watch-card__${target}_added`);
+            });
+
             document.addEventListener(`deleted-${target}-product`, (event) => {
                 if (event.detail.id !== this.id) return;
                 this[target].classList.remove(`watch-card__${target}_added`);

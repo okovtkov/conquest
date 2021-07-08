@@ -11,7 +11,7 @@ mixin watch-info
                 h1.watch-info__title kulte 26 мм
                 button.watch-info__favourite
                     +svg-icon('favourite')
-            span.watch-info__price 12 700 ₽
+            span.watch-info__price 12700 ₽
             header
                 a.watch-info__link.watch-info__link_active(href="#description") Описание
                 a.watch-info__link(href="#characteristics") Технические характеристики
@@ -21,5 +21,5 @@ mixin watch-info
                 p.watch-info__text Наручные часы KULTE — это образец датского дизайнерского наследия, история баланса и точности как внутри, так и снаружи.
             section.watch-info__content(id="characteristics")
                 p.watch-info__text Характеристики
-            +button()
+            +button().watch-info__button
                 | в корзину
